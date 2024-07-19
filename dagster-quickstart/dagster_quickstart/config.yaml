@@ -1,0 +1,4 @@
+ops:
+  trainer:
+    config:
+      num_workers: 1

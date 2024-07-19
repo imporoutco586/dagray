@@ -1,0 +1,18 @@
+[32m2024-07-17 11:01:04 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - b1ae280a-bda4-4a5f-a2dc-cdc96fcd436b - 2952131 - LOGS_CAPTURED - Started capturing logs in process (pid: 2952131).
+[32m2024-07-17 11:01:04 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - b1ae280a-bda4-4a5f-a2dc-cdc96fcd436b - 2952131 - trainer - STEP_START - Started execution of step "trainer".
+2024-07-17 11:01:04,979	INFO worker.py:1567 -- Connecting to existing Ray cluster at address: 10.16.22.178:6379...
+2024-07-17 11:01:04,987	INFO worker.py:1743 -- Connected to Ray cluster. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2024-07-17 11:01:05,071	INFO tune.py:263 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `<FrameworkTrainer>(...)`.
+2024-07-17 11:01:05,073	INFO tune.py:622 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+[36m(TorchTrainer pid=2952298)[0m Started distributed worker processes: 
+[36m(TorchTrainer pid=2952298)[0m - (ip=10.16.22.178, pid=2952397) world_rank=0, local_rank=0, node_rank=0
+[36m(TorchTrainer pid=2952298)[0m - (ip=10.16.22.178, pid=2952398) world_rank=1, local_rank=1, node_rank=0
+[36m(RayTrainWorker pid=2952397)[0m Setting up process group for: env:// [rank=0, world_size=2]
+[36m(RayTrainWorker pid=2952397)[0m Moving model to device: cpu
+[36m(RayTrainWorker pid=2952397)[0m Wrapping provided model in DistributedDataParallel.
+2024-07-17 11:02:01,105	INFO tune.py:1016 -- Wrote the latest version of all result files and experiment state to '/home/kaiyuan/ray_results/TorchTrainer_2024-07-17_11-01-04' in 0.0031s.
+[32m2024-07-17 11:02:01 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - b1ae280a-bda4-4a5f-a2dc-cdc96fcd436b - 2952131 - trainer - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2024-07-17 11:02:01 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - b1ae280a-bda4-4a5f-a2dc-cdc96fcd436b - trainer - Writing file at: /home/kaiyuan/Desktop/dag_ray/dagster-quickstart/envtest/storage/trainer using PickledObjectFilesystemIOManager...
+[32m2024-07-17 11:02:02 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - b1ae280a-bda4-4a5f-a2dc-cdc96fcd436b - 2952131 - trainer - ASSET_MATERIALIZATION - Materialized value trainer.
+[32m2024-07-17 11:02:02 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - b1ae280a-bda4-4a5f-a2dc-cdc96fcd436b - 2952131 - trainer - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2024-07-17 11:02:02 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - b1ae280a-bda4-4a5f-a2dc-cdc96fcd436b - 2952131 - trainer - STEP_SUCCESS - Finished execution of step "trainer" in 57.86s.

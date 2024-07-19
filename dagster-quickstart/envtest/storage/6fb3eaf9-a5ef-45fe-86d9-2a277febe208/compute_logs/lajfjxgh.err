@@ -1,0 +1,31 @@
+[32m2024-04-08 10:20:45 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6fb3eaf9-a5ef-45fe-86d9-2a277febe208 - 13099 - LOGS_CAPTURED - Started capturing logs in process (pid: 13099).
+[32m2024-04-08 10:20:45 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6fb3eaf9-a5ef-45fe-86d9-2a277febe208 - 13099 - trainer - STEP_START - Started execution of step "trainer".
+2024-04-08 10:20:50,097	INFO worker.py:1743 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2024-04-08 10:20:50,870	INFO tune.py:263 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `<FrameworkTrainer>(...)`.
+2024-04-08 10:20:50,872	INFO tune.py:622 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+[36m(TorchTrainer pid=13599)[0m Started distributed worker processes: 
+[36m(TorchTrainer pid=13599)[0m - (ip=10.16.22.178, pid=13761) world_rank=0, local_rank=0, node_rank=0
+[36m(TorchTrainer pid=13599)[0m - (ip=10.16.22.178, pid=13762) world_rank=1, local_rank=1, node_rank=0
+[36m(RayTrainWorker pid=13761)[0m Setting up process group for: env:// [rank=0, world_size=2]
+[36m(RayTrainWorker pid=13762)[0m   0%|          | 0/26421880 [00:00<?, ?it/s]
+[36m(RayTrainWorker pid=13762)[0m   0%|          | 32768/26421880 [00:00<02:07, 206959.57it/s]
+[36m(RayTrainWorker pid=13762)[0m   0%|          | 65536/26421880 [00:00<02:13, 197667.86it/s]
+[36m(RayTrainWorker pid=13762)[0m   0%|          | 131072/26421880 [00:00<01:32, 284306.93it/s]
+[36m(RayTrainWorker pid=13762)[0m  93%|█████████▎| 24477696/26421880 [00:02<00:00, 16540284.35it/s]100%|██████████| 26421880/26421880 [00:02<00:00, 10355451.09it/s]
+[36m(RayTrainWorker pid=13762)[0m 100%|██████████| 29515/29515 [00:00<00:00, 155695.29it/s]100%|██████████| 29515/29515 [00:00<00:00, 155531.56it/s]
+[36m(RayTrainWorker pid=13762)[0m   0%|          | 0/4422102 [00:00<?, ?it/s][32m [repeated 3x across cluster][0m
+[36m(RayTrainWorker pid=13762)[0m   1%|▏         | 65536/4422102 [00:00<00:24, 178827.16it/s][32m [repeated 24x across cluster][0m
+[36m(RayTrainWorker pid=13762)[0m   0%|          | 0/5148 [00:00<?, ?it/s]100%|██████████| 5148/5148 [00:00<00:00, 38284179.06it/s]
+[36m(RayTrainWorker pid=13761)[0m   6%|▌         | 1474560/26421880 [00:10<00:56, 440888.17it/s][32m [repeated 32x across cluster][0m
+[36m(RayTrainWorker pid=13761)[0m  35%|███▌      | 9273344/26421880 [00:15<00:05, 2930943.12it/s][32m [repeated 44x across cluster][0m
+[36m(RayTrainWorker pid=13761)[0m  93%|█████████▎| 24510464/26421880 [00:18<00:00, 6121673.18it/s]
+[36m(RayTrainWorker pid=13761)[0m  96%|█████████▌| 25362432/26421880 [00:18<00:00, 6590332.86it/s]
+[36m(RayTrainWorker pid=13761)[0m  99%|█████████▊| 26050560/26421880 [00:18<00:00, 6453389.58it/s]100%|██████████| 26421880/26421880 [00:18<00:00, 1408013.66it/s]
+[36m(RayTrainWorker pid=13761)[0m Moving model to device: cpu
+[36m(RayTrainWorker pid=13761)[0m Wrapping provided model in DistributedDataParallel.
+2024-04-08 10:21:48,721	INFO tune.py:1016 -- Wrote the latest version of all result files and experiment state to '/home/kaiyuan/ray_results/TorchTrainer_2024-04-08_10-20-45' in 0.0030s.
+[32m2024-04-08 10:21:48 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6fb3eaf9-a5ef-45fe-86d9-2a277febe208 - 13099 - trainer - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2024-04-08 10:21:48 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6fb3eaf9-a5ef-45fe-86d9-2a277febe208 - trainer - Writing file at: /home/kaiyuan/Desktop/dag_ray/dagster-quickstart/envtest/storage/trainer using PickledObjectFilesystemIOManager...
+[32m2024-04-08 10:21:48 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6fb3eaf9-a5ef-45fe-86d9-2a277febe208 - 13099 - trainer - ASSET_MATERIALIZATION - Materialized value trainer.
+[32m2024-04-08 10:21:48 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6fb3eaf9-a5ef-45fe-86d9-2a277febe208 - 13099 - trainer - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2024-04-08 10:21:48 +0800[0m - dagster - [34mDEBUG[0m - __ASSET_JOB - 6fb3eaf9-a5ef-45fe-86d9-2a277febe208 - 13099 - trainer - STEP_SUCCESS - Finished execution of step "trainer" in 1m3s.

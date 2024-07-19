@@ -1,0 +1,27 @@
+
+View detailed results here: /home/kaiyuan/ray_results/TorchTrainer_2024-06-11_15-07-13
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2024-06-11_15-06-43_361036_838927/artifacts/2024-06-11_15-07-13/TorchTrainer_2024-06-11_15-07-13/driver_artifacts`
+
+Training started without custom configuration.
+[36m(RayTrainWorker pid=840099)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
+[36m(RayTrainWorker pid=840099)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw/train-images-idx3-ubyte.gz
+[36m(RayTrainWorker pid=840099)[0m Extracting /tmp/data/FashionMNIST/raw/train-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=840099)[0m 
+[36m(RayTrainWorker pid=840099)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=840099)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=840099)[0m Extracting /tmp/data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=840099)[0m 
+[36m(RayTrainWorker pid=840099)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
+[36m(RayTrainWorker pid=840099)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
+[36m(RayTrainWorker pid=840099)[0m Extracting /tmp/data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=840099)[0m 
+[36m(RayTrainWorker pid=840099)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=840099)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=840099)[0m Extracting /tmp/data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=840099)[0m 
+[36m(RayTrainWorker pid=840099)[0m epoch: 0, loss: 0.9098074436187744
+[36m(RayTrainWorker pid=840099)[0m epoch: 1, loss: 0.7448940873146057
+[36m(RayTrainWorker pid=840099)[0m epoch: 2, loss: 0.6852402091026306
+
+Training completed after 0 iterations at 2024-06-11 15:08:43. Total running time: 1min 30s
+

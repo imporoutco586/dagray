@@ -1,0 +1,65 @@
+[32m2024-06-11 15:06:22 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 92ecb8fb-aa84-4db3-b053-da095b631594 - 838261 - LOGS_CAPTURED - Started capturing logs in process (pid: 838261).
+[32m2024-06-11 15:06:22 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 92ecb8fb-aa84-4db3-b053-da095b631594 - 838261 - trainer - STEP_START - Started execution of step "trainer".
+2024-06-11 15:06:28,272	INFO worker.py:1743 -- Started a local Ray instance. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2024-06-11 15:06:29,532	INFO tune.py:263 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `<FrameworkTrainer>(...)`.
+2024-06-11 15:06:29,535	INFO tune.py:622 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+[2024-06-11 15:06:33,845 E 838261 838526] core_worker.cc:634: :info_message: Attempting to recover 2 lost objects by resubmitting their tasks. To disable object reconstruction, set @ray.remote(max_retries=0).
+2024-06-11 15:06:33,822	ERROR tune_controller.py:1332 -- Trial task failed for trial TorchTrainer_207de_00000
+Traceback (most recent call last):
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/air/execution/_internal/event_manager.py", line 110, in resolve_future
+    result = ray.get(future)
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/_private/auto_init_hook.py", line 21, in auto_init_wrapper
+    return fn(*args, **kwargs)
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/_private/worker.py", line 2667, in get
+    values, debugger_breakpoint = worker.get_objects(object_refs, timeout=timeout)
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/_private/worker.py", line 866, in get_objects
+    raise value
+ray.exceptions.RayActorError: The actor died unexpectedly before finishing this task.
+	class_name: with_parameters.<locals>._Inner
+	actor_id: a0c781c6cb2a8248074e0e8801000000
+	pid: 838778
+	namespace: 0c04a879-70c8-475a-8917-ab2d2a0a0080
+	ip: 10.16.22.178
+The actor is dead because its owner has died. Owner Id: 01000000ffffffffffffffffffffffffffffffffffffffffffffffff Owner Ip address: 10.16.22.178 Owner worker exit type: SYSTEM_ERROR Worker exit detail: Owner's node has crashed.
+The actor never ran - it was cancelled before it started running.
+2024-06-11 15:06:33,866	WARNING experiment_state.py:205 -- Experiment state snapshotting has been triggered multiple times in the last 5.0 seconds. A snapshot is forced if `CheckpointConfig(num_to_keep)` is set, and a trial has checkpointed >= `num_to_keep` times since the last snapshot.
+You may want to consider increasing the `CheckpointConfig(num_to_keep)` or decreasing the frequency of saving checkpoints.
+You can suppress this error by setting the environment variable TUNE_WARN_EXCESSIVE_EXPERIMENT_CHECKPOINT_SYNC_THRESHOLD_S to a smaller value than the current threshold (5.0).
+2024-06-11 15:06:33,867	INFO tune.py:1016 -- Wrote the latest version of all result files and experiment state to '/home/kaiyuan/ray_results/TorchTrainer_2024-06-11_15-06-23' in 0.0032s.
+2024-06-11 15:06:33,868	ERROR tune.py:1044 -- Trials did not complete: [TorchTrainer_207de_00000]
+2024-06-11 15:06:33,872	WARNING experiment_analysis.py:190 -- Failed to fetch metrics for 1 trial(s):
+- TorchTrainer_207de_00000: FileNotFoundError('Could not fetch metrics for TorchTrainer_207de_00000: both result.json and progress.csv were not found at /home/kaiyuan/ray_results/TorchTrainer_2024-06-11_15-06-23/TorchTrainer_207de_00000_0_2024-06-11_15-06-30')
+[32m2024-06-11 15:06:33 +0800[0m - dagster - [34mERROR[0m - [31mtrainer_job - 92ecb8fb-aa84-4db3-b053-da095b631594 - 838261 - trainer - STEP_FAILURE - Execution of step "trainer" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "trainer"::
+
+ray.train.base_trainer.TrainingFailedError: The Ray Train run failed. Please inspect the previous error messages for a cause. After fixing the issue (assuming that the error is not caused by your own application logic, but rather an error such as OOM), you can restart the run from scratch or continue this run.
+To continue this run, you can use: `trainer = TorchTrainer.restore("/home/kaiyuan/ray_results/TorchTrainer_2024-06-11_15-06-23")`.
+To start a new run that will retry on training failures, set `train.RunConfig(failure_config=train.FailureConfig(max_failures))` in the Trainer's `run_config` with `max_failures > 0`, or `max_failures = -1` for unlimited retries.
+
+Stack Trace:
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/utils.py", line 54, in op_execution_error_boundary
+    yield
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_utils/__init__.py", line 463, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/compute_generator.py", line 131, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/compute_generator.py", line 125, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/home/kaiyuan/Desktop/dag_ray/dagster-quickstart/dagster_quickstart/assets.py", line 166, in trainer
+    results = trainer.fit()
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/train/base_trainer.py", line 638, in fit
+    raise TrainingFailedError(
+
+The above exception was caused by the following exception:
+ray.exceptions.RayActorError: The actor died unexpectedly before finishing this task.
+	class_name: with_parameters.<locals>._Inner
+	actor_id: a0c781c6cb2a8248074e0e8801000000
+	pid: 838778
+	namespace: 0c04a879-70c8-475a-8917-ab2d2a0a0080
+	ip: 10.16.22.178
+The actor is dead because its owner has died. Owner Id: 01000000ffffffffffffffffffffffffffffffffffffffffffffffff Owner Ip address: 10.16.22.178 Owner worker exit type: SYSTEM_ERROR Worker exit detail: Owner's node has crashed.
+The actor never ran - it was cancelled before it started running.
+[0m

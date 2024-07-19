@@ -1,0 +1,11 @@
+
+View detailed results here: /home/kaiyuan/ray_results/TorchTrainer_2024-07-17_10-56-34
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2024-07-17_10-19-38_147109_2906518/artifacts/2024-07-17_10-56-35/TorchTrainer_2024-07-17_10-56-34/driver_artifacts`
+
+Training started without custom configuration.
+[36m(RayTrainWorker pid=2946594)[0m epoch: 0, loss: 0.9185951948165894
+[36m(RayTrainWorker pid=2946594)[0m epoch: 1, loss: 0.7594584226608276
+[36m(RayTrainWorker pid=2946594)[0m epoch: 2, loss: 0.6997189521789551
+
+Training completed after 0 iterations at 2024-07-17 10:57:36. Total running time: 1min 0s
+

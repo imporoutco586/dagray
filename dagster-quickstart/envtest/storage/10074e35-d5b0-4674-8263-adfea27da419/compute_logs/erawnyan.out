@@ -1,0 +1,11 @@
+
+View detailed results here: /home/kaiyuan/ray_results/TorchTrainer_2024-07-02_10-26-07
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2024-07-02_10-21-05_780650_1201156/artifacts/2024-07-02_10-26-08/TorchTrainer_2024-07-02_10-26-07/driver_artifacts`
+
+Training started without custom configuration.
+[36m(RayTrainWorker pid=1207441)[0m epoch: 0, loss: 1.0661753416061401
+[36m(RayTrainWorker pid=1207441)[0m epoch: 1, loss: 0.7866321206092834[32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(RayTrainWorker pid=1207441)[0m epoch: 2, loss: 0.6839362978935242[32m [repeated 2x across cluster][0m
+
+Training completed after 0 iterations at 2024-07-02 10:26:55. Total running time: 47s
+

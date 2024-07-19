@@ -1,0 +1,7 @@
+
+View detailed results here: /home/kaiyuan/ray_results/TorchTrainer_2024-06-11_15-06-23
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2024-06-11_15-06-23_402132_838261/artifacts/2024-06-11_15-06-29/TorchTrainer_2024-06-11_15-06-23/driver_artifacts`
+
+Training errored after 0 iterations at 2024-06-11 15:06:33. Total running time: 3s
+Error file: /tmp/ray/session_2024-06-11_15-06-23_402132_838261/artifacts/2024-06-11_15-06-29/TorchTrainer_2024-06-11_15-06-23/driver_artifacts/TorchTrainer_207de_00000_0_2024-06-11_15-06-30/error.txt
+

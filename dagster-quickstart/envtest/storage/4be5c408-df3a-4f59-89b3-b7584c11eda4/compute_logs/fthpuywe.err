@@ -1,0 +1,56 @@
+[32m2024-04-08 16:00:51 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 4be5c408-df3a-4f59-89b3-b7584c11eda4 - 248853 - LOGS_CAPTURED - Started capturing logs in process (pid: 248853).
+[32m2024-04-08 16:00:51 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 4be5c408-df3a-4f59-89b3-b7584c11eda4 - 248853 - trainer - STEP_START - Started execution of step "trainer".
+2024-04-08 16:00:51,766	INFO worker.py:1567 -- Connecting to existing Ray cluster at address: 10.16.22.178:6379...
+[32m2024-04-08 16:01:55 +0800[0m - dagster - [34mERROR[0m - [31mtrainer_job - 4be5c408-df3a-4f59-89b3-b7584c11eda4 - 248853 - trainer - STEP_FAILURE - Execution of step "trainer" failed.
+
+dagster._core.errors.DagsterExecutionInterruptedError
+
+Stack Trace:
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/execute_plan.py", line 286, in dagster_event_sequence_for_step
+    for step_event in check.generator(step_events):
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/execute_step.py", line 525, in core_dagster_event_sequence_for_step
+    for user_event in _step_output_error_checked_user_event_sequence(
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/execute_step.py", line 202, in _step_output_error_checked_user_event_sequence
+    for user_event in user_event_sequence:
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/execute_step.py", line 100, in _process_asset_results_to_events
+    for user_event in user_event_sequence:
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/compute.py", line 214, in execute_core_compute
+    for step_output in _yield_compute_results(step_context, inputs, compute_fn, compute_context):
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/compute.py", line 183, in _yield_compute_results
+    for event in iterate_with_context(
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_utils/__init__.py", line 463, in iterate_with_context
+    next_output = next(iterator)
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/compute_generator.py", line 131, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_core/execution/plan/compute_generator.py", line 125, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/home/kaiyuan/Desktop/dag_ray/dagster-quickstart/dagster_quickstart/assets.py", line 166, in trainer
+    results = trainer.fit()
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/train/base_trainer.py", line 623, in fit
+    result_grid = tuner.fit()
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/tune/tuner.py", line 379, in fit
+    return self._local_tuner.fit()
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/tune/impl/tuner_internal.py", line 477, in fit
+    analysis = self._fit_internal(trainable, param_space)
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/tune/impl/tuner_internal.py", line 596, in _fit_internal
+    analysis = run(
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/tune/tune.py", line 538, in run
+    _ray_auto_init(entrypoint=error_message_map["entrypoint"])
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/tune/tune.py", line 262, in _ray_auto_init
+    ray.init()
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/_private/worker.py", line 1708, in init
+    _global_node = ray._private.node.Node(
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/_private/node.py", line 159, in __init__
+    self._init_gcs_client()
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/_private/node.py", line 702, in _init_gcs_client
+    client = GcsClient(
+  File "python/ray/_raylet.pyx", line 2717, in ray._raylet.GcsClient.__cinit__
+  File "python/ray/_raylet.pyx", line 2726, in ray._raylet.GcsClient._connect
+  File "python/ray/_raylet.pyx", line 589, in ray._raylet.check_status
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/ray/exceptions.py", line 342, in __init__
+    def __init__(self, client_exc, traceback_str=None):
+  File "/home/kaiyuan/anaconda3/envs/py38/lib/python3.8/site-packages/dagster/_utils/interrupts.py", line 82, in _new_signal_handler
+    raise error_cls()
+[0m

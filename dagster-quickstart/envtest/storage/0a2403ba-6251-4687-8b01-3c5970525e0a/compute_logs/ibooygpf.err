@@ -1,0 +1,10 @@
+[32m2024-07-02 10:28:38 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 0a2403ba-6251-4687-8b01-3c5970525e0a - 1210209 - LOGS_CAPTURED - Started capturing logs in process (pid: 1210209).
+[32m2024-07-02 10:28:38 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 0a2403ba-6251-4687-8b01-3c5970525e0a - 1210209 - trainer - STEP_START - Started execution of step "trainer".
+2024-07-02 10:28:38,522	INFO worker.py:1567 -- Connecting to existing Ray cluster at address: 10.16.22.178:6379...
+2024-07-02 10:28:38,530	INFO worker.py:1743 -- Connected to Ray cluster. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2024-07-02 10:28:38,608	INFO tune.py:263 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `<FrameworkTrainer>(...)`.
+2024-07-02 10:28:38,610	INFO tune.py:622 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+[36m(TorchTrainer pid=1210408)[0m Started distributed worker processes: 
+[36m(TorchTrainer pid=1210408)[0m - (ip=10.16.22.178, pid=1210525) world_rank=0, local_rank=0, node_rank=0
+[36m(RayTrainWorker pid=1210525)[0m Setting up process group for: env:// [rank=0, world_size=1]
+[36m(RayTrainWorker pid=1210525)[0m Moving model to device: cpu

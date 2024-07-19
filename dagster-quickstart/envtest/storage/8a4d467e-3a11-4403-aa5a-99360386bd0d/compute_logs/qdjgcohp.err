@@ -1,0 +1,19 @@
+[32m2024-04-09 10:22:18 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 8a4d467e-3a11-4403-aa5a-99360386bd0d - 310773 - LOGS_CAPTURED - Started capturing logs in process (pid: 310773).
+[32m2024-04-09 10:22:18 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 8a4d467e-3a11-4403-aa5a-99360386bd0d - 310773 - trainer - STEP_START - Started execution of step "trainer".
+2024-04-09 10:22:18,235	INFO worker.py:1567 -- Connecting to existing Ray cluster at address: 10.16.22.178:6379...
+2024-04-09 10:22:18,242	INFO worker.py:1743 -- Connected to Ray cluster. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+2024-04-09 10:22:18,338	INFO tune.py:263 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `<FrameworkTrainer>(...)`.
+2024-04-09 10:22:18,339	INFO tune.py:622 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+[36m(TorchTrainer pid=310908)[0m Started distributed worker processes: 
+[36m(TorchTrainer pid=310908)[0m - (ip=10.16.22.178, pid=311076) world_rank=0, local_rank=0, node_rank=0
+[36m(RayTrainWorker pid=311076)[0m Setting up process group for: env:// [rank=0, world_size=1]
+[36m(RayTrainWorker pid=311076)[0m Moving model to device: cpu
+2024-04-09 10:23:21,665	WARNING experiment_state.py:205 -- Experiment state snapshotting has been triggered multiple times in the last 5.0 seconds. A snapshot is forced if `CheckpointConfig(num_to_keep)` is set, and a trial has checkpointed >= `num_to_keep` times since the last snapshot.
+You may want to consider increasing the `CheckpointConfig(num_to_keep)` or decreasing the frequency of saving checkpoints.
+You can suppress this error by setting the environment variable TUNE_WARN_EXCESSIVE_EXPERIMENT_CHECKPOINT_SYNC_THRESHOLD_S to a smaller value than the current threshold (5.0).
+2024-04-09 10:23:21,666	INFO tune.py:1016 -- Wrote the latest version of all result files and experiment state to '/home/kaiyuan/ray_results/TorchTrainer_2024-04-09_10-22-18' in 0.0029s.
+[32m2024-04-09 10:23:21 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 8a4d467e-3a11-4403-aa5a-99360386bd0d - 310773 - trainer - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+[32m2024-04-09 10:23:21 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 8a4d467e-3a11-4403-aa5a-99360386bd0d - trainer - Writing file at: /home/kaiyuan/Desktop/dag_ray/dagster-quickstart/envtest/storage/trainer using PickledObjectFilesystemIOManager...
+[32m2024-04-09 10:23:21 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 8a4d467e-3a11-4403-aa5a-99360386bd0d - 310773 - trainer - ASSET_MATERIALIZATION - Materialized value trainer.
+[32m2024-04-09 10:23:21 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 8a4d467e-3a11-4403-aa5a-99360386bd0d - 310773 - trainer - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+[32m2024-04-09 10:23:21 +0800[0m - dagster - [34mDEBUG[0m - trainer_job - 8a4d467e-3a11-4403-aa5a-99360386bd0d - 310773 - trainer - STEP_SUCCESS - Finished execution of step "trainer" in 1m3s.

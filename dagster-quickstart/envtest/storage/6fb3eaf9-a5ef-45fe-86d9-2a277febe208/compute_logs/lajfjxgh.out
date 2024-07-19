@@ -1,0 +1,39 @@
+
+View detailed results here: /home/kaiyuan/ray_results/TorchTrainer_2024-04-08_10-20-45
+To visualize your results with TensorBoard, run: `tensorboard --logdir /tmp/ray/session_2024-04-08_10-20-45_800717_13099/artifacts/2024-04-08_10-20-50/TorchTrainer_2024-04-08_10-20-45/driver_artifacts`
+
+Training started without custom configuration.
+[36m(RayTrainWorker pid=13761)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz
+[36m(RayTrainWorker pid=13761)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw/train-images-idx3-ubyte.gz
+[36m(RayTrainWorker pid=13762)[0m Extracting /tmp/data/FashionMNIST/raw/train-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=13762)[0m 
+[36m(RayTrainWorker pid=13762)[0m Extracting /tmp/data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=13762)[0m 
+[36m(RayTrainWorker pid=13762)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+[36m(RayTrainWorker pid=13762)[0m Extracting /tmp/data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=13762)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz[32m [repeated 3x across cluster][0m
+[36m(RayTrainWorker pid=13762)[0m 
+[36m(RayTrainWorker pid=13762)[0m Extracting /tmp/data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=13762)[0m 
+[36m(RayTrainWorker pid=13761)[0m Extracting /tmp/data/FashionMNIST/raw/train-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=13762)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=13762)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=13761)[0m 
+[36m(RayTrainWorker pid=13761)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=13761)[0m Using downloaded and verified file: /tmp/data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=13761)[0m Extracting /tmp/data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=13761)[0m 
+[36m(RayTrainWorker pid=13761)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz
+[36m(RayTrainWorker pid=13761)[0m Using downloaded and verified file: /tmp/data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
+[36m(RayTrainWorker pid=13761)[0m Extracting /tmp/data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=13761)[0m 
+[36m(RayTrainWorker pid=13761)[0m Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=13761)[0m Using downloaded and verified file: /tmp/data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
+[36m(RayTrainWorker pid=13761)[0m Extracting /tmp/data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to /tmp/data/FashionMNIST/raw
+[36m(RayTrainWorker pid=13761)[0m 
+[36m(RayTrainWorker pid=13761)[0m epoch: 0, loss: 1.032835841178894
+[36m(RayTrainWorker pid=13761)[0m epoch: 1, loss: 0.6774293780326843[32m [repeated 2x across cluster][0m
+[36m(RayTrainWorker pid=13761)[0m epoch: 2, loss: 0.5383593440055847[32m [repeated 2x across cluster][0m
+
+Training completed after 0 iterations at 2024-04-08 10:21:48. Total running time: 57s
+
